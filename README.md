@@ -7,6 +7,13 @@ repo** (one click — *Use this template*), build everything there, and submit t
 each assignment in your portal — it's your workspace, your submission, and your portfolio all
 at once. The rhythm is simple: do the work, commit it, submit on the card. Done.
 
+## 🎓 Capstone — deployed research paper
+
+**Refresh / Content Opportunity Scoring (Lane 2).** Ranked content-refresh queue with reason
+codes. Model precision@50 = **0.86** vs **0.32** for the transparent baseline on held-out
+clients. Paper: **[https://himanshu-yadav-10.github.io/Flyrank-ML-starter-template/](https://himanshu-yadav-10.github.io/Flyrank-ML-starter-template/)**
+(also recorded in `submission/paper_url.txt`). Report: [`work/capstone_report.md`](work/capstone_report.md).
+
 Everything here runs on a small **anonymized** slice of real FlyRank search data. No credentials,
 no private client data, no setup headaches.
 
