@@ -1,0 +1,74 @@
+{
+  "base_rate_full_corpus": 0.5420666666666667,
+  "base_rate_test_fold": 0.3909677419354839,
+  "models": {
+    "base_rate": {
+      "average_precision": 0.3909677419354839,
+      "f1": 0.3909677419354839,
+      "precision_at_100": 0.3909677419354839,
+      "precision_at_20": 0.3909677419354839,
+      "precision_at_50": 0.3909677419354839,
+      "roc_auc": 0.5
+    },
+    "decision_tree": {
+      "average_precision": 0.5753189989001579,
+      "f1": 0.6338851022395326,
+      "precision_at_100": 0.63,
+      "precision_at_20": 0.8,
+      "precision_at_50": 0.64,
+      "roc_auc": 0.7415203737887913
+    },
+    "gradient_boosting": {
+      "average_precision": 0.6618354472831889,
+      "f1": 0.644131455399061,
+      "precision_at_100": 0.85,
+      "precision_at_20": 0.8,
+      "precision_at_50": 0.86,
+      "roc_auc": 0.7672610834529782
+    },
+    "logistic_regression": {
+      "average_precision": 0.5215418768632023,
+      "f1": 0.5662451896646509,
+      "precision_at_100": 0.44,
+      "precision_at_20": 0.35,
+      "precision_at_50": 0.4,
+      "roc_auc": 0.7002914980763613
+    },
+    "random_forest": {
+      "average_precision": 0.6182189675945406,
+      "f1": 0.6395458845789972,
+      "precision_at_100": 0.72,
+      "precision_at_20": 0.65,
+      "precision_at_50": 0.74,
+      "roc_auc": 0.7500295227262839
+    },
+    "w4_rule_baseline": {
+      "average_precision": 0.3909677419354839,
+      "f1": 0.0,
+      "precision_at_100": 0.31,
+      "precision_at_20": 0.3,
+      "precision_at_50": 0.32,
+      "roc_auc": 0.5
+    }
+  },
+  "predictions_csv": "work/outputs/w05_model_predictions.csv",
+  "split": {
+    "seed": 42,
+    "strategy": "client_holdout",
+    "test_clients": 6
+  },
+  "target": "is_declining_label",
+  "task": "w05_model",
+  "week4_baseline_rule": {
+    "metrics": {
+      "average_precision": 0.3909677419354839,
+      "f1": 0.0,
+      "precision_at_100": 0.31,
+      "precision_at_20": 0.3,
+      "precision_at_50": 0.32,
+      "roc_auc": 0.5
+    },
+    "score": "stale_flag x visible_flag x visibility_pctrank"
+  },
+  "winner_by_precision_50": "gradient_boosting"
+}
