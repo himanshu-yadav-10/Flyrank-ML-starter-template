@@ -1,0 +1,35 @@
+{
+  "base_rate": 0.5420666666666667,
+  "data_slice": "starter 30k (processed feature vector)",
+  "queue": {
+    "declining_rate_flagged": 0.9411764705882353,
+    "declining_rate_top10": 1.0,
+    "declining_rate_top50": 0.74,
+    "flagged": 17,
+    "output_csv": "work/outputs/baseline_action_score.csv",
+    "rows": 30000
+  },
+  "rule": {
+    "action": "refresh if score > 0 else monitor",
+    "features": [
+      "days_since_last_update",
+      "impressions_90d"
+    ],
+    "plain_words": "stale (>=180d) AND visible (>=500 impressions) are worth refreshing; most impressions go first",
+    "reason_code": "stale_visible_page",
+    "score": "stale_flag * visible_flag * visibility_pctrank"
+  },
+  "signals": [
+    {
+      "name": "staleness",
+      "note": "monotonic staleness story fails (181+ bucket drops); holds once a >=500-impression volume floor is added \u2014 stale+visible 0.941 declining vs 0.420 stale-low-volume",
+      "verdict": "MIXED"
+    },
+    {
+      "name": "ctr_vs_decline",
+      "note": "declining rate falls monotonically 0.664 -> 0.511 across CTR quartiles; entangled with position, so directional not causal",
+      "verdict": "CONFIRMED"
+    }
+  ],
+  "task": "w04_baseline_score"
+}
