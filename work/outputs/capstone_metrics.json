@@ -1,0 +1,16 @@
+{
+  "average_precision": 0.6618354472831889,
+  "base_rate_test_fold": 0.3909677419354839,
+  "n_test_clients": 6,
+  "n_test_rows": 2325,
+  "n_train_clients": 26,
+  "n_train_rows": 27675,
+  "precision_at_100": 0.85,
+  "precision_at_20": 0.8,
+  "precision_at_50": 0.86,
+  "roc_auc": 0.7672610834529782,
+  "seed": 42,
+  "split": "client_holdout",
+  "task": "capstone",
+  "w4_precision_at_50": 0.32
+}

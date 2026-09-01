@@ -1,0 +1,12 @@
+{
+  "reason_codes": {
+    "low_reach_review": 114,
+    "mature_content_decline": 51,
+    "monitor_borderline": 483,
+    "monitor_stable": 955,
+    "position_loss": 109,
+    "reach_loss": 128,
+    "review_decline_risk": 94,
+    "visible_low_ctr": 391
+  }
+}
