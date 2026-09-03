@@ -82,6 +82,8 @@ def main() -> None:
     }
     w4 = _week4_baseline(df, train_mask, test_mask)
     metrics["w4_precision_at_50"] = precision_at_k(yte, w4, 50)
+    metrics["task"] = "capstone"
+    metrics["split"] = "client_holdout"
     metrics["seed"] = RANDOM_STATE
     metrics["n_train_rows"] = int(train_mask.sum())
     metrics["n_test_rows"] = int(test_mask.sum())
